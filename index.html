@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รีวิวหนังสือ - Sapiens: ประวัติย่อมนุษยชาติ</title>
+
+    <!-- Google Fonts: Prompt for Thai typography, Inter & Playfair Display for accents -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Prompt:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Kanit&family=Sriracha&display=swap"
+        rel="stylesheet">
+
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // Define handleImageError early in <head> so inline onerror handlers find it during image loading
+        function handleImageError(imgElement, title, iconClass) {
+            const parent = imgElement.parentElement;
+            if (!parent) return;
+            const fallbackDiv = document.createElement('div');
+            fallbackDiv.className = 'img-fallback';
+            fallbackDiv.innerHTML = `
+        <i class="fa-solid ${iconClass}"></i>
+        <span style="font-weight: 600; font-size: 0.9rem;">${title}</span>
+        <span style="font-size: 0.75rem; opacity: 0.7;">(images/${imgElement.src.split('/').pop()})</span>
+      `;
+            parent.replaceChild(fallbackDiv, imgElement);
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="nav-brand">
+            <i class="fa-solid fa-book-open"></i> REED
+        </a>
+        <ul class="nav-links">
+            <li><a href="#overview">ภาพรวมหนังสือ</a></li>
+            <li><a href="#perspective">เปลี่ยนมุมมอง</a></li>
+            <li><a href="#audience">เหมาะกับใคร?</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1 class="kanit-regular">Sapiens <span class="sriracha-regular">A Brief History of Humankind</span>
+                </h1>
+                <div class="hero-author">
+                    <i class="fa-solid fa-pen-nib"></i> เขียนโดย <strong>Yuval Noah Harari</strong>
+                </div>
+                <p class="hero-quote">
+                    "จากสัตว์เลี้ยงลูกด้วยนมที่ไร้ความสำคัญ สู่ 'พระเจ้า' ผู้ครองโลกใบนี้..."
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#overview" class="btn btn-primary">
+                        <i class="fa-solid fa-compass"></i> เริ่มต้นสำรวจประวัติศาสตร์
+                    </a>
+                    <a href="#footer-quote" class="btn btn-secondary">
+                        <i class="fa-solid fa-quote-left"></i> ข้อคิดส่งท้าย
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-img-card">
+                    <img src="images/sapiens.png" alt="Sapiens Book Cover" class="img-responsive"
+                        onerror="handleImageError(this, 'Sapiens Book Cover', 'fa-book')">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="overview-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-badge fa-solid fa-magnifying-glass"></span>
+                <h2 class="section-title sriracha-regular" style="color: #D6672F;">Book Overview</h2>
+                <p class="section-desc">"ท่องเวลาถอยหลังเพื่อทำความเข้าใจการก้าวขึ้นสู่จุดสูงสุดของสายพันธุ์มนุษย์"</p>
+            </div>
+
+            <div class="intro-banner">
+                <p style="font-size: 19px;">
+                    หนังสือ Sapiens พานักอ่านย้อนเวลาไปกว่า 70,000 ปี เพื่อสำรวจว่า Homo sapiens
+                    ซึ่งเคยเป็นเพียงสัตว์เลี้ยงลูกด้วยนมสายพันธุ์หนึ่งที่ไร้ความสำคัญบนโลก สามารถก้าวขึ้นมาเป็น
+                    "พระเจ้า" ผู้ครอบครองและควบคุมโลกใบนี้ได้อย่างไร ผ่าน 3 การปฏิวัติครั้งใหญ่
+                    ที่เปลี่ยนโฉมหน้าประวัติศาสตร์มนุษยชาติ:
+                </p>
+            </div>
+
+            <div class="revolutions-grid">
+                <!-- Revolution Card 1 -->
+                <div class="rev-card">
+                    <div class="rev-img-holder">
+                        <img src="images/cognitive.jpg" alt="การปฏิวัติทางรับรู้และเข้าใจ"
+                            onerror="handleImageError(this, 'Cognitive Revolution', 'fa-brain')">
+                    </div>
+                    <div class="rev-content">
+                        <span class="rev-tag">70,000 ปี ก่อน</span>
+                        <h3 class="rev-title">การปฏิวัติทางรับรู้และเข้าใจ</h3>
+                        <p class="rev-desc bai-jamjuree-regular">
+                            <strong>The Cognitive Revolution:</strong> จุดเริ่มต้นเมื่อประมาณ 70,000 ปีก่อน Sapiens
+                            พัฒนาภาษาพิเศษที่สามารถพูดคุยถึง "สิ่งที่ไม่มีตัวตนจริง" (จินตนาการร่วม)
+                            ทำให้มนุษย์นับพันนับหมื่นคนสามารถร่วมมือกันได้ โดยไม่จำต้องรู้จักกันส่วนตัว
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Revolution Card 2 -->
+                <div class="rev-card">
+                    <div class="rev-img-holder">
+                        <img src="images/agricultural.jpg" alt="การปฏิวัติเกษตรกรรม"
+                            onerror="handleImageError(this, 'Agricultural Revolution', 'fa-wheat-awn')">
+                    </div>
+                    <div class="rev-content">
+                        <span class="rev-tag">10,000 ปี ก่อน</span>
+                        <h3 class="rev-title">การปฏิวัติเกษตรกรรม</h3>
+                        <p class="rev-desc bai-jamjuree-regular">
+                            <strong>The Agricultural Revolution:</strong> เกิดขึ้นเมื่อประมาณ 10,000 ปีก่อน
+                            เปลี่ยนมนุษย์จากการล่าสัตว์และเก็บของป่ามาเป็นเกษตรกร Harari
+                            มองว่าการปฏิวัตินี้ไม่ได้ทำให้คุณภาพชีวิต รายบุคคลดีขึ้น แต่กลับสร้าง "กับดัก"
+                            ที่ผูกมัดมนุษย์ไว้กับที่ดินและการทำงานหนัก
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Revolution Card 3 -->
+                <div class="rev-card">
+                    <div class="rev-img-holder">
+                        <img src="images/scientific.jpg" alt="การปฏิวัติวิทยาศาสตร์"
+                            onerror="handleImageError(this, 'Scientific Revolution', 'fa-flask')">
+                    </div>
+                    <div class="rev-content">
+                        <span class="rev-tag">500 ปี ก่อน</span>
+                        <h3 class="rev-title">การปฏิวัติวิทยาศาสตร์</h3>
+                        <p class="rev-desc bai-jamjuree-regular">
+                            <strong>The Scientific Revolution:</strong> เริ่มต้นเมื่อราว 500 ปีก่อน เมื่อมนุษย์ยอมรับว่า
+                            "ตนเองไม่รู้อะไรเลย" (Ignoramus) นำไปสู่การค้นคว้า การผนึกกำลังกับจักรวรรดินิยมและทุนนิยม
+                            จนเกิดเทคโนโลยีที่เปลี่ยนโลกอย่างรวดเร็ว
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="perspective" class="perspective-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-badge fa-solid fa-eye"></span>
+                <h2 class="section-title sriracha-regular" style="color: #D6672F;">
+                    ทำไมหนังสือเล่มนี้ถึงเปลี่ยนวิธีมองโลกของคุณ?</h2>
+                <p class="section-desc">"การถอดรหัสกรอบความคิดเดิม และท้าทายสิ่งที่เรายึดถือในชีวิตประจำวัน"</p>
+            </div>
+
+            <div class="perspective-list">
+                <!-- Item 1 -->
+                <div class="perspective-item">
+                    <div class="perspective-img-box">
+                        <img src="images/revolution.jpg" alt="การมองประวัติศาสตร์แบบภาพรวม"
+                            onerror="handleImageError(this, 'Bird’s-eye View', 'fa-eye')">
+                    </div>
+                    <div class="perspective-content-box">
+                        <h3>การมองประวัติศาสตร์แบบภาพรวม</h3>
+                        <span class="perspective-subtitle">(Bird’s-eye View)</span>
+                        <p class="bai-jamjuree-regular">
+                            ผู้เขียนไม่ได้เล่าประวัติศาสตร์แบบท่องจำปี พ.ศ. หรือชื่อบุคคลสำคัญ แต่ใช้เลนส์ของชีววิทยา
+                            เศรษฐศาสตร์ และมานุษยวิทยามาเชื่อมโยงกัน ทำให้เราเห็น "ภาพใหญ่" ของวิวัฒนาการมนุษย์
+                            ที่คุณไม่เคยเจอในชั้นเรียน
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="perspective-item">
+                    <div class="perspective-img-box">
+                        <img src="images/deconstruc.jpg" alt="รื้อถอนความเชื่อเดิม"
+                            onerror="handleImageError(this, 'Deconstructing Reality', 'fa-cubes-stacked')">
+                    </div>
+                    <div class="perspective-content-box">
+                        <h3>รื้อถอนความเชื่อเดิม</h3>
+                        <span class="perspective-subtitle">(Deconstructing Reality)</span>
+                        <p class="bai-jamjuree-regular">
+                            หนังสือท้าทายระบบคุณค่าที่เรายึดถือในชีวิตประจำวัน ไม่ว่าจะเป็นเงินตรา สิทธิมนุษยชน
+                            ระบอบการเมือง หรือแม้กระทั่งแนวคิดเรื่องบริษัท โดยชี้ให้เห็นว่าทั้งหมดนี้เป็นเพียง
+                            "ความจริงในจินตนาการร่วม" (Inter-subjective Reality) ที่มนุษย์ตกลงจะเชื่อพร้อมกันเท่านั้น
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="perspective-item">
+                    <div class="perspective-img-box">
+                        <img src="images/progress.jpg" alt="ตั้งคำถามกับความก้าวหน้า"
+                            onerror="handleImageError(this, 'Questioning Progress', 'fa-chart-line')">
+                    </div>
+                    <div class="perspective-content-box">
+                        <h3>ตั้งคำถามกับความก้าวหน้า</h3>
+                        <span class="perspective-subtitle">(Questioning Progress)</span>
+                        <p class="bai-jamjuree-regular">
+                            ในขณะที่โลกเราพัฒนาไปไกลในเชิงเทคโนโลยี และวิทยาศาสตร์ หนังสือกลับชวนให้เราฉุกคิดว่า
+                            มนุษย์ในปัจจุบันมีความสุขและมีคุณค่าชีวิต ที่ดีกว่าบรรพบุรุษยุคหินจริงหรือไม่?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="audience" class="audience-section">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-badge fa-solid fa-person"></i></span>
+                <h2 class="section-title sriracha-regular" style="color: #D6672F;">ใครที่เหมาะกับหนังสือเล่มนี้?</h2>
+                <p class="section-desc">"ไม่ว่าคุณจะเป็นนักคิด นักอ่าน หรือผู้แสวงหาคำตอบของชีวิต
+                    หนังสือเล่มนี้ตอบโจทย์คุณ"</p>
+            </div>
+
+            <div class="audience-grid">
+                <!-- Audience 1 -->
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h4>ผู้ที่ชอบเปิดมุมมองใหม่</h4>
+                        <p class="bai-jamjuree-regular">คนที่อยากรู้ว่ามนุษย์ตัวเล็กๆ กลายมาเป็นผู้ครองโลกได้อย่างไร
+                            ผ่านการปฏิวัติทางความคิด</p>
+                    </div>
+                </div>
+
+                <!-- Audience 2 -->
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <div>
+                        <h4>ผู้ที่สนใจประวัติศาสตร์และสังคมศาสตร์</h4>
+                        <p class="bai-jamjuree-regular">ผู้ที่เบื่อประวัติศาสตร์แบบท่องจำวันที่หรือสงคราม
+                            แต่ชอบประวัติศาสตร์เชิงวิเคราะห์ วัฒนธรรม
+                            ศาสนา และระบบทุนนิยม</p>
+                    </div>
+                </div>
+
+                <!-- Audience 3 -->
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fa-solid fa-question"></i>
+                    </div>
+                    <div>
+                        <h4>คนชอบตั้งคำถามเชิงปรัชญา</h4>
+                        <p class="bai-jamjuree-regular">ใครที่ชอบขบคิดเรื่องความสุข ความหมายของชีวิต
+                            และความเชื่อร่วมกันของมนุษย์ เช่น เงิน ชาติ
+                            หรือศาสนา</p>
+                    </div>
+                </div>
+
+                <!-- Audience 4 -->
+                <div class="audience-card">
+                    <div class="audience-icon">
+                        <i class="fa-solid fa-book-reader"></i>
+                    </div>
+                    <div>
+                        <h4>นักอ่านทั่วไป</h4>
+                        <p class="bai-jamjuree-regular">หนังสือเล่มนี้เล่าเรื่องยากให้สนุกได้ แม้ไม่ใช่ผู้เชี่ยวชาญก็อ่านเข้าใจง่าย
+                            เพราะผู้เขียนมีวิธีเล่าเรื่องที่น่าติดตาม</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer-quote">
+        <div class="container">
+            <div class="footer-quote-box">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <div class="footer-quote-title sriracha-regular">ลองหยุดคิดสักครู่...</div>
+                <blockquote class="footer-quote-text bai-jamjuree-regular">
+                    “สิ่งที่คุณยึดติดและทุ่มเทสุดกำลังในตอนนี้ เป็นความต้องการที่แท้จริงของคุณ
+                    หรือแค่เรื่องเล่าที่โลกหล่อหลอมให้คุณเชื่อ?”
+                </blockquote>
+            </div>
+
+            <div class="footer-copy">
+                <p>ขอบคุณภาพปกหนังสือจาก: <a
+                        href="https://www.gypsygroup.net/product/1477/%E0%B8%9B%E0%B8%81%E0%B9%81%E0%B8%82%E0%B9%87%E0%B8%87-%E0%B9%80%E0%B8%8B%E0%B9%80%E0%B8%9B%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B9%8C-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%B4%E0%B8%A2%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B8%99%E0%B8%B8%E0%B8%A9%E0%B8%A2%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4-%E0%B8%89%E0%B8%9A%E0%B8%B1%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%9A10-%E0%B8%9B%E0%B8%B5-sapiens-a-brief-history-of-humankind-10-year-an"
+                        target="_blank" rel="noopener noreferrer" style="color: #D6672F; text-decoration: underline; word-break: break-all;">สำนักพิมพ์ยิปซี</a></p>
+
+                <p>&copy; Review of <strong>Sapiens: A Brief History of Humankind</strong> by Yuval Noah Harari.</p>
+            </div>
+        </div>
+
+  </footer>
+
+
+
+
+    </footer>
+
+    <script>
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const htmlElement = document.documentElement;
+
+        // Check saved theme or system preference
+        const savedTheme = localStorage.getItem('sapiens-theme');
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlElement.setAttribute('data-theme', 'dark');
+            updateThemeIcon('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('sapiens-theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            const icon = themeToggleBtn.querySelector('i');
+            if (theme === 'dark') {
+                icon.className = 'fa-solid fa-sun';
+            } else {
+                icon.className = 'fa-solid fa-moon';
+            }
+        }
+    </script>
+  
+</body>
+
+</html>
