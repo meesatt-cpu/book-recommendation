@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รีวิวหนังสือ - Sapiens: ประวัติย่อมนุษยชาติ</title>
+    <title>รีวิวหนังสือประวัติศาสตร์ Sapiens | เซเปียนส์ ประวัติย่อมนุษยชาติ</title>
+    <meta name="keywords"
+        content="หนังสือประวัติศาตร์, ประวัติศาสตร์มนุษย์, ประวัติศาสตร์, รีวิวหนังสือประวัติศาสตร์, มนุษย์, ประวัติย่อมนุษยชาติ">
+    <meta name="descriptions"
+        content="เหตุใดสัตว์เลี้ยงลูกด้วยนมที่ไม่สลักสำคัญอย่าง โฮโม เซเปียส์ จึงเป็นมนุษย์เพียงสปีชีส์เดียวที่ครองโลก">
 
     <!-- Google Fonts: Prompt for Thai typography, Inter & Playfair Display for accents -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +62,7 @@
             <li><a href="#overview">ภาพรวมหนังสือ</a></li>
             <li><a href="#perspective">เปลี่ยนมุมมอง</a></li>
             <li><a href="#audience">เหมาะกับใคร?</a></li>
+            <li><a href="#faq">คำถามยอดฮิต</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
             <i class="fa-solid fa-moon"></i>
@@ -293,6 +298,72 @@
         </div>
     </section>
 
+
+
+
+
+ <!-- FAQ Section: ต้องมีพื้นฐานหรือไม่? (Bootstrap Accordion Style with Gap) -->
+ <div id="faq" class="faq">   
+ <div style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h3 style="text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 2rem; color: var(--text-main);">
+          <i class="fa-solid fa-circle-question" style="color: var(--primary); margin-right: 0.5rem;"></i> คำถามยอดฮิต: ต้องมีพื้นฐานหรือไม่?
+        </h3>
+        
+        <div class="accordion-gap-container" style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- Accordion Item 1 -->
+          <div class="accordion-gap-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s ease;">
+            <button class="accordion-gap-header" onclick="toggleAccordion(this)" style="width: 100%; text-align: left; padding: 1.25rem 1.5rem; background: none; border: none; font-family: inherit; font-size: 1.1rem; font-weight: 600; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span><i class="fa-solid fa-graduation-cap" style="color: var(--primary); margin-right: 0.75rem;"></i> จำเป็นต้องมีพื้นฐานประวัติศาสตร์หรือวิทยาศาสตร์มาก่อนไหม?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon" style="color: var(--primary); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-gap-body" style="max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0, 1, 0, 1); padding: 0 1.5rem; background: var(--bg-card);">
+              <p style="padding-bottom: 1.25rem; color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; border-top: 1px dashed var(--border-color); padding-top: 1rem; margin-top: 0;">
+                <strong>ไม่จำเป็นเลย!</strong> ผู้เขียน (Yuval Noah Harari) ใช้ภาษาเรียบง่าย เปรียบเปรยเรื่องยากๆ ให้เข้าใจง่าย และเล่าเรื่องแบบเรียงลำดับความคิดอย่างเห็นภาพ แม้ไม่มีพื้นฐานประวัติศาสตร์ ภาษาศาสตร์ หรือชีววิทยามาก่อน ก็สามารถอ่านสนุกและอินไปกับเนื้อหาได้ทันที
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-gap-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s ease;">
+            <button class="accordion-gap-header" onclick="toggleAccordion(this)" style="width: 100%; text-align: left; padding: 1.25rem 1.5rem; background: none; border: none; font-family: inherit; font-size: 1.1rem; font-weight: 600; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span><i class="fa-solid fa-brain" style="color: var(--primary); margin-right: 0.75rem;"></i> หนังสือเล่มนี้อ่านยากหรือน่าเบื่อหรือไม่?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon" style="color: var(--primary); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-gap-body" style="max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0, 1, 0, 1); padding: 0 1.5rem; background: var(--bg-card);">
+              <p style="padding-bottom: 1.25rem; color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; border-top: 1px dashed var(--border-color); padding-top: 1rem; margin-top: 0;">
+                ไม่อ่านยากและไม่น่าเบื่ออย่างแน่นอน เพราะไม่ใช่หนังสือท่องจำชื่อคนหรือปี พ.ศ. แต่เป็นการเล่าเชิงตั้งคำถาม สนุกเหมือนฟังเรื่องเล่าการผจญภัยของมนุษยชาติ ซึ่งจะทำให้คุณต้องฉุกคิดและร้อง "อ๋อ!" ตลอดทั้งเล่ม
+              </p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-gap-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s ease;">
+            <button class="accordion-gap-header" onclick="toggleAccordion(this)" style="width: 100%; text-align: left; padding: 1.25rem 1.5rem; background: none; border: none; font-family: inherit; font-size: 1.1rem; font-weight: 600; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span><i class="fa-solid fa-clock" style="color: var(--primary); margin-right: 0.75rem;"></i> ควรเตรียมตัวอย่างไรก่อนเริ่มอ่าน?</span>
+              <i class="fa-solid fa-chevron-down accordion-icon" style="color: var(--primary); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-gap-body" style="max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0, 1, 0, 1); padding: 0 1.5rem; background: var(--bg-card);">
+              <p style="padding-bottom: 1.25rem; color: var(--text-muted); font-size: 0.98rem; line-height: 1.7; border-top: 1px dashed var(--border-color); padding-top: 1rem; margin-top: 0;">
+                เพียงแค่เปิดใจให้กว้างพร้อมตั้งคำถามกับสิ่งรอบตัว เช่น เงินทอง ระบบการเมือง หรือความเชื่อที่เราคุ้นเคยในชีวิตประจำวัน เตรียมสมุดจดสักเล่มไว้บันทึกประโยคเด็ดๆ ก็พร้อมดื่มด่ำกับเล่มนี้ได้แล้ว
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+
+ 
+
+
+
+
+    
+
     <footer id="footer-quote">
         <div class="container">
             <div class="footer-quote-box">
@@ -352,6 +423,29 @@
                 icon.className = 'fa-solid fa-moon';
             }
         }
+
+
+        // Accordion Toggle Script
+    function toggleAccordion(button) {
+      const item = button.parentElement;
+      const body = item.querySelector('.accordion-gap-body');
+      const icon = button.querySelector('.accordion-icon');
+      const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+
+      // Close all accordion items for standard behavior
+      document.querySelectorAll('.accordion-gap-body').forEach(b => {
+        b.style.maxHeight = '0px';
+      });
+      document.querySelectorAll('.accordion-icon').forEach(i => {
+        i.style.transform = 'rotate(0deg)';
+      });
+
+      // Toggle current item
+      if (!isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
     </script>
   
 </body>
